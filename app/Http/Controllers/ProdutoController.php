@@ -9,9 +9,9 @@ class ProdutoController extends Controller
 {
     public function index()
     {
-        $produtos = Produto::all();
+        $produto = Produto::all();
 
-        return view('index', compact('produtos'));
+        return view('index', compact('produto'));
     }
 
     public function create()
@@ -38,7 +38,13 @@ class ProdutoController extends Controller
 
     // direciona para página index novamente,
     // com uma mensagem de sucesso
-    return redirect()->route('produtos.index')
+    return redirect()->route('produto.index')
         ->with('mensagem', 'Cadastro salvo com sucesso.');
     }
+
+    public function show(Produto $produto)
+    {
+        return view('show', compact('produto'));
+    }
+
 }
