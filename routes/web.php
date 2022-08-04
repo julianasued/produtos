@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('produtos', ProdutoController::class);
+Route::resource('produto', ProdutoController::class);
 
 Route::middleware([
     'auth:sanctum',

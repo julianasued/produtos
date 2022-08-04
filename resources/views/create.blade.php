@@ -4,14 +4,10 @@
 
 <div class="container">
   <main>
-<!--     <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="https://www.ideiaspara.com.br/dominios/skillemblemas/imagens/usuario.svg" alt="" width="72" height="72">
-      <h2>Formulário de Cadastro</h2>
-    </div>
- -->
+
       <div class="col-md-12 col-lg-12">
         <h4 class="mb-3">Informações do Produto</h4>
-        <form action="{{ route('produtos.store') }}" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
+        <form action="{{ route('produto.store') }}" method="post" class="needs-validation" enctype="multipart/form-data" novalidate>
           @csrf
           <div class="row g-3">
             <div class="col-sm-12">
