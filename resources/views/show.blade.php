@@ -20,9 +20,9 @@
               <input type="text" class="form-control" name="descricao" placeholder="{{ $produto->descricao }}" disabled="">
             </div>
 
-            <div class="col-md-3">
-              <label for="image" class="form-label">Imagem</label>
-              <input type="text" class="form-control" name="image" placeholder="{{ $produto->image }}" disabled="">
+            <div class="col-12">
+              <label for="image" class="form-label">Imagem</label><br>
+              <img src="{{ url('public/img/'.$produto->image) }}" style="height: 100px; width: 150px;">
             </div>
 
             <hr class="my-4">
