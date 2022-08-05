@@ -30,8 +30,7 @@
             <form action="{{ route('produto.destroy', $p->id) }}" method="post">
               <a href="{{ route('produto.show',
                   $p->id) }}" class="btn btn-info btn-sm">Detalhes</a> |
-              <a href="{{ route('produto.edit',
-                  $p->id) }}" class="btn btn-warning btn-sm">Editar</a> |
+              <a href="" class="btn btn-warning btn-sm">Editar</a> |
 
             @csrf
             @method('DELETE')
