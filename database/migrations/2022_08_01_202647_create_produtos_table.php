@@ -19,7 +19,7 @@ class CreateProdutosTable extends Migration
             $table->decimal('preco', 19,2);
             $table->text('descricao');
             $table->string('image')->nullable();
-            $table->timestamp('deleted_at')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

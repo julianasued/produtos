@@ -27,10 +27,13 @@
           <td>{{ $p->descricao }}</td>
           <td><img src="{{ url('public/img/'.$p->image) }}" style="height: 100px; width: 150px;"></td>
           <td>
-            <form action="" method="post">
+            <form action="{{ route('produto.destroy', $p->id) }}" method="post">
               <a href="{{ route('produto.show',
                   $p->id) }}" class="btn btn-info btn-sm">Detalhes</a> |
               <a href="" class="btn btn-warning btn-sm">Editar</a> |
+
+            @csrf
+            @method('DELETE')
 
               <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
             </form>
