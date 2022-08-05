@@ -47,4 +47,14 @@ class ProdutoController extends Controller
         return view('show', compact('produto'));
     }
 
+    public function destroy(Produto $produto)
+    {
+        $produto->delete();
+
+        // vamos chamar a view com uma mensagem de
+        // de sucesso.
+        return redirect()->route('produto.index')
+          ->with('mensagem','Cadastro excluído com sucesso.');
+    }
+
 }
