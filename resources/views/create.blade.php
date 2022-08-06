@@ -20,7 +20,7 @@
 
             <div class="col-md-3">
                 <label for="preco" class="form-label">Preço <span class="text-muted"></span></label>
-                <input type="preco" class="form-control" name="preco" id=""required>
+                <input type="preco" class="form-control" name="preco" maxlength="9" id="valor" onkeyup="formatarMoeda()">
                 <div class="invalid-feedback">
                 Insira um preço válido.
                 </div>
