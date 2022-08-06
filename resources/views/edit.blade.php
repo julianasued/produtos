@@ -11,35 +11,23 @@
             <div class="col-sm-12">
                 <label for="nome" class="form-label">Nome do produto</label>
                 <input type="text" class="form-control" value="{{ $produto->nome }}" name="nome" placeholder="" value="">
-                <div class="invalid-feedback">
-                    Insira um nome válido.
-                </div>
             </div>
 
             <div class="col-12">
                 <label for="preco" class="form-label">Preço <span class="text-muted"></span></label>
-                <input type="preco" class="form-control" value="{{ $produto->preco }}" name="preco">
-                <div class="invalid-feedback">
-                    Insira um preço válido.
-                </div>
+                <input type="preco" class="form-control" value="{{ $produto->preco }}" name="preco" maxlength="9" id="valor" onkeyup="formatarMoeda()">
             </div>
 
             <div class="col-md-3">
                 <label for="descricao" class="form-label">Descrição</label>
                 <input type="text" class="form-control" value="{{ $produto->descricao }}" name="descricao" id="descricao">
-                <div class="invalid-feedback">
-                    Descrição obrigatório.
-                </div>
             </div>
 
             <div class="col-md-3">
                 <label for="image">Imagem do Produto:</label>
                 <label for="image" class="form-label">Imagem</label><br>
-                <input type="file" class="form-control-file" name="image" id="image" placeholder="" required>
+                <input type="file" class="form-control-file" name="image" id="image" placeholder="">
                 <img src="{{ url('public/img/'.$produto->image) }}" style="height: 100px; width: 150px;">
-                <div class="invalid-feedback">
-                    Imagem obrigatório.
-                </div>
             </div>
 
             <hr class="my-4">
