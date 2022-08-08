@@ -37,7 +37,7 @@
 
             <div class="col-12">
               <label for="descricao" class="form-label">Descrição</label>
-              <input type="text" class="form-control" name="descricao" id="descricao"placeholder="" required>
+              <input type="text" class="form-control" name="descricao" maxlength="55" id="descricao"placeholder="" required>
               <div class="invalid-feedback">
               Descrição obrigatória.
               </div>
