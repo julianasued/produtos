@@ -67,8 +67,7 @@ class ProdutoController extends Controller
         $request->validate([
             'nome' => 'required',
             'preco' => 'required',
-            'descricao' => 'required',
-            'image' => 'required']);
+            'descricao' => 'required']);
 
             // Faz upload da imagem
         if($request->file('image')){
@@ -77,7 +76,7 @@ class ProdutoController extends Controller
             $file->move(public_path('public/img'), $filename);
             $produto['image'] = $filename;
             }
-            
+
           // obtém os valores do form
           $produto->update($request->all());
 
