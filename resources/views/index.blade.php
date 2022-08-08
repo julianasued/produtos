@@ -2,8 +2,6 @@
 
 @section('content')
 
-<h2>Teste de Rota!</h2>
-
 <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
 
   <h3>Lista de Cadastro:</h3>
