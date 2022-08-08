@@ -2,6 +2,10 @@
 
 @section('content')
 
+@if($status = Session::get('mensagem'))
+<div class="alert alert-success" role="alert">{{ $status }}</div>
+@endif
+
 <main class="col-md-12 ms-sm-auto col-lg-12 px-md-4">
 
   <h3>Lista de Cadastro:</h3>

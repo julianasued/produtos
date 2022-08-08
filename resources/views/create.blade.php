@@ -2,6 +2,15 @@
 
 @section('content')
 
+@if($errors->any())
+  <h3>Houve alguns erros ao processar o formulário</h3>
+  <ul>
+     @foreach($errors->all() as $error)
+        <li class="alert alert-danger" role="alert">{{ $error }}</li>
+     @endforeach
+  </ul>
+@endif
+
 <div class="container">
   <main>
 

@@ -2,6 +2,15 @@
 
 @section('content')
 
+@if($errors->any())
+  <h3>Houve alguns erros ao processar o formulário</h3>
+  <ul>
+     @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+     @endforeach
+  </ul>
+@endif
+
 <div class="col-md-12 col-lg-12">
     <h4 class="mb-3">Informações do Produto</h4>
     <form action="{{ route('produto.update', $produto->id) }}" method="post" enctype="multipart/form-data">
